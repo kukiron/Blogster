@@ -1,3 +1,4 @@
-node_modules
+/node_modules
+/coverage
 nohup.out
 .DS_Store
