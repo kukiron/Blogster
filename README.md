@@ -7,10 +7,11 @@ Blog application with cache implementation & integration tests. Technologies use
 * Create React App
 * Redis
 * Jest
+* Integration testing (Puppeteer)
 
 ## Getting started
 
-Clone the repo & install dependencies. To install the server side dependencies -
+Clone the repo & install dependencies. To install the server-side dependencies -
 
 ```shell
 > git clone https://github.com/kukiron/Blogster.git
@@ -29,4 +30,4 @@ To install the client-side project dependencies -
 
 You can install & start local instance of MongoDB. The project has used mLab MongoDB service. Also, you need to use your own clientID & client secret from Google.
 
-Use these in the config/dev.js file for development purposes.
+Use these credentials in the config/dev.js file for development purposes.
