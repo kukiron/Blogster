@@ -1,4 +1,6 @@
-# Blogster
+# Blogster_NodeCI
+
+[![Build Status](https://travis-ci.org/kukiron/Blogster_NodeCI.svg?branch=master)](https://travis-ci.org/kukiron/Blogster_NodeCI)
 
 Blog application with cache implementation & integration tests. Technologies used -
 
