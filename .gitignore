@@ -1,4 +1,6 @@
 /node_modules
 /coverage
+*.ini
+*.txt
 nohup.out
 .DS_Store
