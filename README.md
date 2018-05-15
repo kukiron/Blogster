@@ -8,8 +8,8 @@ Blog application with cache implementation & integration tests. Technologies use
 * MongoDB (Mongoose)
 * Create React App
 * Redis
-* Jest
-* Integration testing (Puppeteer)
+* Integration testing (with Jest & Puppeteer)
+* AWS S3 Bucket
 
 ## Getting started
 
@@ -34,8 +34,7 @@ You have to set up config file for development - `config/dev.js`. It contains th
 
 ```javascript
 module.exports = {
-  googleClientID:
-    "Your Google Client ID",
+  googleClientID: "Your Google Client ID",
   googleClientSecret: "Your Google Client Secret",
   mongoURI: "Running MongoDB instance",
   redisUrl: "Running Redis instance",
