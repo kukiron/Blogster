@@ -2,11 +2,13 @@
 
 [![Build Status](https://travis-ci.org/kukiron/Blogster_NodeCI.svg?branch=master)](https://travis-ci.org/kukiron/Blogster_NodeCI) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/38aa640fc68344278902c721d5775fef)](https://www.codacy.com/app/kukiron/Blogster_NodeCI?utm_source=github.com&utm_medium=referral&utm_content=kukiron/Blogster_NodeCI&utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/0943ce7b83cb59f8bbd2/maintainability)](https://codeclimate.com/github/kukiron/Blogster_NodeCI/maintainability) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
-Blog application with cache implementation & integration tests. AWS S3 service are used for file uploading. Technologies used -
+Blog application with cache implementation & integration tests. AWS S3 service is used for file uploading.
+Technologies used -
 
 * Node.js
 * MongoDB (Mongoose)
 * Create React App
+* Redux & React-router
 * Redis
 * Integration testing (with Jest & Puppeteer)
 * AWS S3
