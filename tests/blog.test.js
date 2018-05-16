@@ -1,3 +1,4 @@
+const path = require("path")
 const Page = require("./interfaces/page")
 
 let page
@@ -41,7 +42,7 @@ describe("When user is logged in", async () => {
         expect(confirmation).toEqual("Please confirm your entries")
       })
 
-      test("saving adds blog to index page", async () => {
+      test("adds blog directly to bloglist - without uploading", async () => {
         await page.click("button.green")
         await page.waitFor(".card")
 
@@ -49,6 +50,28 @@ describe("When user is logged in", async () => {
         const content = await page.getContentsOf("p")
         expect(title).toEqual(sampleTitle)
         expect(content).toEqual(sampleContent)
+      })
+
+      test("adds image to individual blog page - after uploading", async () => {
+        // get the image file from assets directory
+        const filepath = path.relative(
+          process.cwd(),
+          __dirname + "/assets/sample-image.jpg"
+        )
+        const elem = await page.$('input[type="file"]')
+        // upload the image
+        await elem.uploadFile(filepath)
+        // submit the blogpost with image
+        await page.click("button.green")
+        await page.waitFor(".card")
+        // click to see the blogpost
+        await page.click(".card-action a")
+        await page.waitFor("div img")
+
+        // alt text of the img tag should be the same as the blogpost header
+        const imgAltText = await page.getImgAltTextOf("img")
+        const header = await page.getContentsOf("h3")
+        expect(imgAltText).toEqual(header)
       })
     })
   })

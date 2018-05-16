@@ -35,6 +35,10 @@ class CustomPage {
     return this.page.$eval(selector, el => el.innerHTML)
   }
 
+  async getImgAltTextOf(selector) {
+    return this.page.$eval(selector, img => img.alt)
+  }
+
   get(path) {
     return this.page.evaluate(_path => {
       return fetch(_path, {
