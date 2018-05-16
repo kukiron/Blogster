@@ -31,6 +31,7 @@
     "lint:fix": "eslint --fix . --ext .js, .jsx"
   },
   "devDependencies": {
-    "eslint-config-latest": "^1.0.6"
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.1"
   }
 }
