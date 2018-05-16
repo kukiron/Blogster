@@ -1,7 +1,7 @@
 import mapKeys from "lodash/mapKeys"
 import { FETCH_BLOGS, FETCH_BLOG } from "../actions/types"
 
-export default function(state = {}, action) {
+export default (state = {}, action) => {
   const { type, payload } = action
 
   switch (type) {

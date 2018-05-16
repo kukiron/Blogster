@@ -7,19 +7,16 @@ import BlogField from "./BlogField"
 import formFields from "./formFields"
 
 class BlogForm extends Component {
-  renderFields() {
-    return _.map(formFields, ({ label, name }) => {
-      return (
-        <Field
-          key={name}
-          component={BlogField}
-          type="text"
-          label={label}
-          name={name}
-        />
-      )
-    })
-  }
+  renderFields = () =>
+    _.map(formFields, ({ label, name }) => (
+      <Field
+        key={name}
+        component={BlogField}
+        type="text"
+        label={label}
+        name={name}
+      />
+    ))
 
   render() {
     return (
@@ -39,7 +36,7 @@ class BlogForm extends Component {
   }
 }
 
-function validate(values) {
+const validate = values => {
   const errors = {}
 
   _.each(formFields, ({ name }) => {

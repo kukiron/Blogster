@@ -7,19 +7,14 @@ import BlogFormReview from "./BlogFormReview"
 class BlogNew extends Component {
   state = { showFormReview: false }
 
-  renderContent() {
-    if (this.state.showFormReview) {
-      return (
-        <BlogFormReview
-          onCancel={() => this.setState({ showFormReview: false })}
-        />
-      )
-    }
-
-    return (
+  renderContent = () =>
+    this.state.showFormReview ? (
+      <BlogFormReview
+        onCancel={() => this.setState({ showFormReview: false })}
+      />
+    ) : (
       <BlogForm onBlogSubmit={() => this.setState({ showFormReview: true })} />
     )
-  }
 
   render() {
     return <div>{this.renderContent()}</div>

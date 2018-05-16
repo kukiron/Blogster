@@ -9,42 +9,35 @@ import * as actions from "../../actions"
 class BlogFormReview extends Component {
   state = { file: null }
 
-  renderFields = () => {
-    const { formValues } = this.props
-
-    return _.map(formFields, ({ name, label }) => (
+  renderFields = () =>
+    _.map(formFields, ({ name, label }) => (
       <div key={name}>
         <label>{label}</label>
-        <div>{formValues[name]}</div>
+        <div>{this.props.formValues[name]}</div>
       </div>
     ))
-  }
 
-  renderButtons = () => {
-    const { onCancel } = this.props
-
-    return (
-      <div>
-        <button
-          className="yellow darken-3 white-text btn-flat"
-          onClick={onCancel}
-        >
-          Back
-        </button>
-        <button className="green btn-flat right white-text">
-          Save Blog
-          <i className="material-icons right">email</i>
-        </button>
-      </div>
-    )
-  }
+  renderButtons = () => (
+    <div>
+      <button
+        className="yellow darken-3 white-text btn-flat"
+        onClick={this.props.onCancel}
+      >
+        Back
+      </button>
+      <button className="green btn-flat right white-text">
+        Save Blog
+        <i className="material-icons right">email</i>
+      </button>
+    </div>
+  )
 
   onFileChange = e => {
     this.setState({ file: e.target.files[0] })
   }
 
-  onSubmit = event => {
-    event.preventDefault()
+  onSubmit = e => {
+    e.preventDefault()
 
     const { file } = this.state
     const { submitBlog, history, formValues } = this.props

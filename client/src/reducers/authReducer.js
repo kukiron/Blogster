@@ -1,6 +1,6 @@
 import { FETCH_USER } from "../actions/types"
 
-export default function(state = null, action) {
+export default (state = null, action) => {
   const { type, payload } = action
 
   switch (type) {
