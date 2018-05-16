@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 class Header extends Component {
-  renderContent() {
+  renderContent = () => {
     switch (this.props.auth) {
       case null:
         return
@@ -43,8 +43,6 @@ class Header extends Component {
   }
 }
 
-function mapStateToProps({ auth }) {
-  return { auth }
-}
+const mapStateToProps = ({ auth }) => ({ auth })
 
 export default connect(mapStateToProps)(Header)
