@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import map from "lodash/map"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
+import map from "lodash/map"
+
 import { fetchBlogs } from "../../actions"
 
 class BlogList extends Component {

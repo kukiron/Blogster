@@ -5,9 +5,9 @@ import { createStore, applyMiddleware } from "redux"
 import reduxThunk from "redux-thunk"
 import axios from "axios"
 
+import "materialize-css/dist/css/materialize.min.css"
 import App from "./components/App"
 import reducers from "./reducers"
-import "materialize-css/dist/css/materialize.min.css"
 
 window.axios = axios
 

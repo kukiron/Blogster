@@ -1,10 +1,11 @@
 // BlogFormReview shows users their form inputs for review
-import _ from "lodash"
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import formFields from "./formFields"
 import { withRouter } from "react-router-dom"
+import _ from "lodash"
+
 import * as actions from "../../actions"
+import formFields from "./formFields"
 
 class BlogFormReview extends Component {
   state = { file: null }
