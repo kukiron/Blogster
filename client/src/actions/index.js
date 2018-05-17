@@ -18,9 +18,10 @@ export const submitBlog = (values, file, history) => async dispatch => {
   let res
 
   if (!file) {
+    // if no file chosen, post the blog without image
     res = await axios.post("/api/blogs", values)
   } else {
-    // put the image in AWS S3 bucket
+    // if chosen, put the image in AWS S3 bucket
     await axios.put(data.url, file, {
       headers: {
         "Content-Type": file.type
