@@ -1,8 +1,9 @@
 module.exports = {
-  googleClientID:
-    "824990695575-16ih4q6a1rbnug21se0r5mkmb6urtg8e.apps.googleusercontent.com",
-  googleClientSecret: "Eic6GHp4lTrpDGLM9FdvkPaW",
+  googleClientID: process.env.GOOGLE_CLIENT_ID,
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   mongoURI: "mongodb://127.0.0.1:27017/blogster_nodeci",
   redisUrl: "redis://127.0.0.1:6379",
-  cookieKey: "123123123"
+  cookieKey: "abc123xyz",
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 }
