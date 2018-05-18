@@ -38,7 +38,7 @@ if (["production", "ci"].includes(process.env.NODE_ENV)) {
   })
 }
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-  console.log(`Listening on port`, PORT)
+const port = process.env.PORT || 5050
+app.listen(port, () => {
+  console.log(`🌍 Express server is running on port: ${port} 🐎`)
 })
